@@ -1,13 +1,13 @@
-const express = require('express')
-const app = express()
-const userRoutes = require('./routes/user')
+const express = require('express');
+const app = express();
+const coffeeRoutes = require('./routes/coffee');
 
-// middleware
-app.use(express.json())
+// Middleware
+app.use(express.json());
 
-// route
-app.use('/', userRoutes)
+// Routes
+app.use('/', coffeeRoutes);
 
-// start server
-const PORT = 8081
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+// Start server
+const PORT = 8081;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
